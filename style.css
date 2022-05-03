@@ -10,7 +10,8 @@ main {
     margin:0;
     padding:0;
     
-    grid-template-rows: 50px 1fr 50px;
+    
+    grid-template-rows: 50px auto 50px;
     
     grid-template-areas: 
     ".header"
@@ -18,12 +19,16 @@ main {
     ".footer"
     ;
 
+    overflow: auto;
+
     
 
 }
 
 .header{
     
+    position: sticky;
+    top:0;
     grid-area: header;
     background-color: #001533;
     box-shadow: 0px 5px 5px #001533;
@@ -116,7 +121,7 @@ img {
 }
 
 .content {
-    overflow: auto;
+    
     grid-area: content;
     display: grid;
     grid-template-columns: repeat(4, 200px);
@@ -140,4 +145,13 @@ img {
     height: 50px;
 }
 
+
+@media screen and (max-width:650px)
+{
+
+    .content {
+        grid-template-columns: 200px;
+    }
+    
+}
 
