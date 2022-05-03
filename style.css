@@ -1,0 +1,143 @@
+body {
+    min-height:100vh;
+    margin:0;
+    padding:0;
+
+}
+
+
+main {
+    margin:0;
+    padding:0;
+    
+    grid-template-rows: 50px 1fr 50px;
+    
+    grid-template-areas: 
+    ".header"
+    ".content"
+    ".footer"
+    ;
+
+    
+
+}
+
+.header{
+    
+    grid-area: header;
+    background-color: #001533;
+    box-shadow: 0px 5px 5px #001533;
+    
+}
+
+.logo {
+    grid-area: logo;
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+    
+
+}
+
+img {
+    object-fit: cover;
+    width:50px;
+    height: 50px;
+    border-radius: 50%;
+    
+    
+    
+}
+
+.card {
+    display: grid;
+    width: 200px;
+    height: 350px;
+    border: solid 2px #001533;
+    border-radius: 10px;
+    object-fit: cover;
+
+    grid-template-rows: 200px 50px 100px;
+    grid-template-areas: ".image" ".nav" ".text";
+
+}
+
+.text {
+    display: grid;
+    grid-area: text;
+    font-size: small;
+    text-align: justify;
+    margin: 5px;
+}
+
+.image-container {
+    display: grid;
+    grid-area: image;
+    width: 200px;
+    height: 200px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+
+.image-container > img {
+    
+    width:100%;
+    height: 100%;
+    object-fit: cover;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+   
+}
+
+.nav{
+    display:grid;
+    grid-area: nav;
+    grid-template-columns: 1fr 30px 30px;
+    gap:3px;
+    margin-right: 10px;
+    margin-top: 10px;
+
+  
+}
+
+.nav > img
+{
+    width: 30px;
+    height: 30px;
+    
+    
+}
+
+.text {
+    display: grid;
+}
+
+.content {
+    overflow: auto;
+    grid-area: content;
+    display: grid;
+    grid-template-columns: repeat(4, 200px);
+    
+
+    gap:10px;
+
+    margin-top: 100px;
+
+    margin-left:25%;
+
+    margin-bottom: 100px;
+}
+
+
+.footer {
+   
+    grid-area: footer;
+    background-color: #001533;
+    
+    height: 50px;
+}
+
+
